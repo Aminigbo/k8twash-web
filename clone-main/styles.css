@@ -1,0 +1,260 @@
+:root{
+    /* --main-text: #1EAC82; */
+    --main-text:#FBA370;
+    --main-bg: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+span{
+    color: var(--main-text);
+}
+
+body {
+    background-color: var(--main-bg);
+    letter-spacing: 0;
+    line-height: 1.5;
+    /* margin: 0 10px; */
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+    }
+
+    nav{
+        width: 100%;
+        height: 12vh;
+        padding:0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* background-color: #fff; */
+    }
+
+    nav > .logo {
+        width: 130px;
+    }
+
+    nav > .logo > img {
+        width: 100%;
+    }
+
+    nav > .socials {
+        display: flex;
+        width: 50%;
+        justify-content: end;
+        gap: 10px;
+    }
+
+    nav > .socials > a {
+        display: inline-block;
+        text-decoration: none;
+        color:var(--main-text);
+        text-align: center;
+        height: 40px;
+        padding: 8px;
+        transition-duration: .3s;
+        cursor: pointer;
+    }
+
+    nav > .socials > a:hover {
+        transform: scale(125px);
+    }
+
+    nav > .socials > a > svg {
+        fill: currentColor;
+        height: 24px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0;
+    }
+
+    .hero-text{
+        /* width: 50%; */
+        color: var(--main-text);
+    }
+
+    .hero-text > h1 {
+        animation: drop-and-bounce;
+        position: relative;
+        animation-duration: 2s;
+    }
+    
+
+    .hero-text p {
+        font-size: 4.5vw;
+        text-align: center;
+       padding-top: 20px;
+       animation: slideIn;
+       position: relative;
+       animation-duration: 1s;
+    }
+
+    .hero-image{
+        /* width: 50%; */
+        padding-top: 20px;
+        animation: fadeIn;
+        animation-duration: 3s;
+        text-align: center;
+    }
+    .hero-image h3{
+        /* color: #1b285f; */
+        color: #fff;
+        font-size: 20px;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .hero-image .img{
+        width: 70%;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes drop-and-bounce {
+        0%{top: -200px;}
+        40%{top: 0px;}
+        70%{top: -5px;}
+        100%{top: 0px;}
+    }
+
+    @keyframes slideIn {
+        0%{left: -200px;}
+        100%{left: 0px;}
+    }
+
+    h1{
+        font-size: 10vw;
+        /* color: #1b285f; */
+        color: #fff;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 6vw;
+        color: #1b285f;
+        color: #fff;
+
+        text-align: center;
+    }
+
+    footer{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cta-btn{
+       width: 10rem;
+    }
+
+    .t-c{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .t-c > a{
+        text-decoration: none;
+    }
+
+    /* tablet */
+    @media (min-width: 768px){
+        h1{
+            font-size: 7vw;
+        }
+
+        h2{
+            font-size: 3vw;
+        }
+        
+        main {
+            flex-direction: row;
+            min-height: 60vh;
+            justify-content: center;
+        }
+
+        .hero-text{
+            padding-top: 0px;
+            width: 55%;
+        }
+
+        .hero-image{
+            width: 40%;
+        }
+
+        .hero-text p {
+            font-size: 2.5vw;
+        }
+
+        .cta{
+            gap: 30px;
+        }
+
+
+    }
+
+    /* tablet */
+    @media (min-width: 1024px){
+        h1{
+            font-size: 5vw;
+        }
+
+        h2{
+            font-size: 2vw;
+        }
+
+        main {
+           align-items: start;
+        }
+
+        .hero-text{
+            padding-top: 40px;
+            width: 53%;
+        }
+
+        .hero-image{
+            width: 30%;
+        }
+
+        .hero-text p {
+            font-size: 3vw;
+        }
+
+        footer{
+        height: unset;
+        }
+
+        .cta{
+            gap: 40px;
+        }
+
+        .cta-btn{
+            width: 12rem;
+         }
+
+
+    }
